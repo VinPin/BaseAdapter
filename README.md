@@ -13,7 +13,7 @@ Android 中 RecyclerView 适配器的高效封装库，支持多条目类型、�
 ## 添加依赖
 
 ```kotlin
-implementation("com.github.VinPin:baseAdapter:2.1.3")
+implementation("com.github.VinPin:baseAdapter:2.1.4")
 ``` 
 
 ## 快速使用

@@ -1,0 +1,30 @@
+[versions]
+agp = "7.4.2"
+kotlin = "1.6.21"
+# core-ktx:1.8.0（2022-6-1发布），不使用高版本是因1.9.0+需要compileSdk至少为33。
+coreKtx = "1.8.0"
+# appcompat:1.4.2（2022-6-1发布），不使用高版本是因1.5.0+需要compileSdk至少为32。
+appcompat = "1.4.2"
+# material:1.6.1（2022-5-31发布），不使用高版本是因1.7.0+需要compileSdk至少为32。
+material = "1.6.1"
+# kotlinx-coroutines-android:1.6.4（2022-6-13发布），不使用高版本是因1.7.0+依赖kotlin-stdlib-jdk8:1.8.20。
+coroutines = "1.6.4"
+# gson
+gson = "2.10.1"
+# recyclerview
+recyclerview = "1.2.0"
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+androidx-recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
+android-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+
+
