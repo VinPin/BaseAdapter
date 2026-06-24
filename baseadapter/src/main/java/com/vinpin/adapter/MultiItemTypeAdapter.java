@@ -128,6 +128,10 @@ public class MultiItemTypeAdapter<T> extends RecyclerView.Adapter<ViewHolder> {
             onBindViewHolder(holder, position);
         } else {
             T item = mDatas.get(position);
+            View itemView = holder.getConvertView();
+            itemView.setTag(R.id.view_tag_base_adapter_holder, holder);
+            itemView.setTag(R.id.view_tag_base_adapter_position, position);
+            itemView.setTag(R.id.view_tag_base_adapter_item, item);
             mItemViewDelegateManager.convertPayloads(holder, item, position, payloads);
         }
     }
